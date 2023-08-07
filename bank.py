@@ -12,7 +12,17 @@ class Bank:
          self.amount -= withdraw_amount
          print(f"The new balance is {self.amount}")
          self.update_balance()
-    
+    def request_loan(self,amount):
+        if amount > 0 :
+            if self.amount >= amount:
+               self.amount -= amount
+               self.update_balance()
+               print(f"Loan of {amount} granted. New balance: {self.amount}")
+            
+            else:
+                print("Loan request denied. Insufficient balance.")
+        else:
+            print("Invalid loan amount.")
     def update_balance(self):
      with sqlite3.connect('bank.db') as conn:
         cursor = conn.cursor()
