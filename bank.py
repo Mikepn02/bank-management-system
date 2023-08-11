@@ -38,3 +38,5 @@ def create_table():
                       (name TEXT PRIMARY KEY,identity_number TEXT,pin TEXT ,balance REAL)''')
     conn.commit()
     conn.close()
+
+

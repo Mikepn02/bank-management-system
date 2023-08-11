@@ -1,6 +1,6 @@
 from bank import Bank, create_table
 from register import create_account
-from login import validate_user, fetch_user_balance
+from login import validate_user, fetch_user_balance,fetch_user_info
 
 def main():
     create_table()
@@ -27,6 +27,13 @@ def main():
                 if user:
                     user_balance = fetch_user_balance(identity_number)
                     account1 = Bank(user, identity_number, user_balance)
+
+                    user_info = fetch_user_info(identity_number)
+
+                    print(f"Welcome, {user_info['name']}!")
+                    print(f"Identity Number: {identity_number}")
+                    print(f"Account Balance: {user_balance}")
+                    
                     while True:
                         print("1. Deposit")
                         print("2. Withdraw")

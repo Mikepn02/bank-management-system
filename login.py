@@ -26,3 +26,14 @@ def fetch_user_balance(identity_number):
         return balance[0]  # Return the balance value
     else:
         return 0  # Return 0 if no balance is found
+def fetch_user_info(identity_number):
+    conn = sqlite3.connect('bank.db')
+    cursor = conn.cursor()
+    cursor.execute("SELECT name FROM bank_account WHERE identity_number = ?", (identity_number,))
+    user_info = cursor.fetchone()
+    conn.close()
+
+    if user_info:
+        return {'name': user_info[0]}  # Assuming the column index of name is 0
+    else:
+        return None
