@@ -44,18 +44,4 @@ bank.py: Contains the Bank class responsible for managing user accounts and tran
 register.py: Contains functions to register new users and validate user information.
 login.py: Contains functions for user login and authentication.
 README.md: This README file.
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
-Author
-Nzabera Mike peter
->>>>>>> 72883a4df0226d267ed88019e06e18ea588c57c0
-
-Acknowledgments
-This project was inspired by the need for a basic bank management system implementation.
-Thank you to the Python community for providing useful libraries and resources.
-<<<<<<< HEAD
-Feel free to modify this template according to your project's specific details and additional features. Make sure to provide clear instructions, explanations, and credits where necessary.
-=======
-Feel free to modify this template according to your project's specific details and additional features. Make sure to provide clear instructions, explanations, and credits where necessary.
->>>>>>> 72883a4df0226d267ed88019e06e18ea588c57c0
